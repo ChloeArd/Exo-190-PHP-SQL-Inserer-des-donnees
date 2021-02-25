@@ -69,13 +69,13 @@ try {
     $pdo->beginTransaction();
     $insert1 = "INSERT INTO utilisateur VALUES ";
 
-    $sql5 = $insert1."('Blanco', 'Gilbert', 'gilbert.blanco@gmail.com', 'mdp123456', '2 rue des paradis, fourmies', 59610, 'France', NOW())";
+    $sql5 = $insert1."(NULL, 'Blanco', 'Gilbert', 'gilbert.blanco@gmail.com', 'mdp123456', '2 rue des paradis, fourmies', 59610, 'France', NOW())";
     $pdo->exec($sql5);
 
-    $sql6 = $insert1."('Fraise', 'Nadia', 'nadida.fraise@gmail.com', 'fraise753159', '19 rue des fraises, fruits', 86120, 'France', NOW())";
+    $sql6 = $insert1."(NULL, 'Fraise', 'Nadia', 'nadida.fraise@gmail.com', 'fraise753159', '19 rue des fraises, fruits', 86120, 'France', NOW())";
     $pdo->exec($sql6);
 
-    $sql7 = $insert1."('Herbe', 'John', 'john.herber@gmail.com', 'herbe321', '34 rue des herbes, foret', 12589, 'France', NOW())";
+    $sql7 = $insert1."(NULL, 'Herbe', 'John', 'john.herber@gmail.com', 'herbe321', '34 rue des herbes, foret', 12589, 'France', NOW())";
     $pdo->exec($sql7);
 
     $pdo->commit();
@@ -84,15 +84,15 @@ try {
      */
 
     $pdo->beginTransaction();
-    $insert2 = "INSERT INTO produit VALUES";
+    $insert2 = "INSERT INTO produit VALUES ";
 
-    $sql8 = $insert2."('M&Ms', 3.05, 'des bonbons en chocolat avec noisette', 'efbfuiepjfpezfjpefjepffjefjifbazznsalsnalssaskpâ')";
+    $sql8 = $insert2."(NULL, 'M&Ms', 3.05, 'des bonbons en chocolat avec noisette', 'efbfuiepjfpezfjpefjepffjefjifbazznsalsnalssaskpâ')";
     $pdo->exec($sql8);
 
-    $sql9 = $insert2."('Tagada', 2.12, 'des bonbons à la fraise', 'efbfuiepfveqgrgerfrejfpezfjpefjepffjefjifbazznsalsnalssaskpâ')";
+    $sql9 = $insert2."(NULL, 'Tagada', 2.12, 'des bonbons à la fraise', 'efbfuiepfveqgrgerfrejfpezfjpefjepffjefjifbazznsalsnalssaskpâ')";
     $pdo->exec($sql9);
 
-    $sql10 = $insert2."('Fondant au chocolat', 3.54, 'Gâteau au chocolat avec un coeur fondant', 'efbfuiepjfpezfjpefjepffjefjifbazznsalsrfrfregtrhtrhehtynalssaskpâ')";
+    $sql10 = $insert2."(NULL, 'Fondant au chocolat', 3.54, 'Gâteau au chocolat avec un coeur fondant', 'efbfuiepjfpezfjpefjepffjefjifbazznsalsrfrfregtrhtrhehtynalssaskpâ')";
     $pdo->exec($sql10);
 
     $pdo->commit();
