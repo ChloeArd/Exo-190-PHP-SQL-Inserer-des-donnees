@@ -22,7 +22,7 @@ try {
      */
 
     $sql1 = "
-        INSERT INTO utilisateur VALUES (NULL, 'Ardoise', 'Chloé', 'chloe.ardoise@gmail.com', 'manger123', '4 BIS ruelle vitou, Anor', 59186, 'France', NOW())
+        INSERT INTO utilisateur VALUES (NULL, 'Ardoise', 'Chloé', 'chlochlo.ard@hotmail.fr', 'manger123', '4 BIS ruelle vitou, Anor', 59186, 'France', NOW())
     ";
 
     $result = $pdo->exec($sql1);
