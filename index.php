@@ -75,9 +75,10 @@ try {
     $sql6 = $insert1."('Fraise', 'Nadia', 'nadida.fraise@gmail.com', 'fraise753159', '19 rue des fraises, fruits', 86120, 'France', NOW())";
     $pdo->exec($sql6);
 
-    $sql7 = $insert1."('Blanco', 'Gilbert', 'gilbert.blanco@gmail.com', 'mdp123456', '2 rue des paradis, fourmies', 59610, 'France', NOW())";
+    $sql7 = $insert1."('Herbe', 'John', 'john.herber@gmail.com', 'herbe321', '34 rue des herbes, foret', 12589, 'France', NOW())";
     $pdo->exec($sql7);
 
+    $pdo->commit();
     /**
      * 6. A l'aide des méthodes beginTransaction, commit et rollBack, insérez trois nouveaux produits dans la table produit.
      */
@@ -85,15 +86,16 @@ try {
     $pdo->beginTransaction();
     $insert2 = "INSERT INTO produit VALUES";
 
-    $sql8 = "('M&Ms', 3.05, 'des bonbons en chocolat avec noisette', 'efbfuiepjfpezfjpefjepffjefjifbazznsalsnalssaskpâ')";
+    $sql8 = $insert2."('M&Ms', 3.05, 'des bonbons en chocolat avec noisette', 'efbfuiepjfpezfjpefjepffjefjifbazznsalsnalssaskpâ')";
     $pdo->exec($sql8);
 
-    $sql9 = "('Tagada', 2.12, 'des bonbons à la fraise', 'efbfuiepfveqgrgerfrejfpezfjpefjepffjefjifbazznsalsnalssaskpâ')";
+    $sql9 = $insert2."('Tagada', 2.12, 'des bonbons à la fraise', 'efbfuiepfveqgrgerfrejfpezfjpefjepffjefjifbazznsalsnalssaskpâ')";
     $pdo->exec($sql9);
 
-    $sql10 = "('Fondant au chocolat', 3.54, 'Gâteau au chocolat avec un coeur fondant', 'efbfuiepjfpezfjpefjepffjefjifbazznsalsrfrfregtrhtrhehtynalssaskpâ')";
+    $sql10 = $insert2."('Fondant au chocolat', 3.54, 'Gâteau au chocolat avec un coeur fondant', 'efbfuiepjfpezfjpefjepffjefjifbazznsalsrfrfregtrhtrhehtynalssaskpâ')";
     $pdo->exec($sql10);
 
+    $pdo->commit();
 }
 catch (PDOException $e) {
     echo "Une erreur est survenue: ".$e->getMessage()."<br>";
